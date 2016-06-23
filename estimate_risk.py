@@ -37,7 +37,7 @@ def main():
      y_train, y_test) = train_test_split(X, y, random_state=144, test_size=0.3)
 
     model.fit(X_train, y_train)
-    print 'Model accuracy: %0.2f' % round(model.score(X_train, y_train), 2)
+    print 'Model accuracy: %f' % (model.score(X_train, y_train) * 100.0)
     #print "Coefficients:", model.coef_
     print "Intercept:",  model.intercept_
 
@@ -48,10 +48,10 @@ def main():
 
     predict = model.predict(X)
 
-    plt.plot(X, predict, "ro")
-    plt.plot(X, y, "ko")
-    plt.ylim(-0.1, 1.1)
-    plt.show()
+    #plt.plot(X, predict, "ro")
+    #plt.plot(X, y, "ko")
+    #plt.ylim(-0.1, 1.1)
+    #plt.show()
 
 if __name__ == "__main__":
 
