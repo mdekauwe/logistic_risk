@@ -24,7 +24,8 @@ def main():
 
     fname = "loans_imputed.csv"
     df = pd.read_csv(fname)
-
+    print df.describe()
+    
     X = df[['credit.policy', 'int.rate','installment',\
             'log.annual.inc','dti','fico','days.with.cr.line',\
             'revol.bal','revol.util','inq.last.6mths', 'delinq.2yrs','pub.rec']]
